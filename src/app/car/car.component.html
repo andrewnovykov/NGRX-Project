@@ -1,0 +1,28 @@
+
+
+  <a href="#" class="list-group-item "
+  [ngClass] = "{'list-group-item-danger': car.isSold}"
+  >
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{car.name}}</h5>
+      <small>{{car.date}}</small>
+    </div>
+    <p class="mb-1">{{car.model}}</p>
+    <hr>
+    <div class="row">
+      <div class="col col-md-12">
+        <button type="button"
+        (click)="onDelete()"
+        class="btn btn-danger btn-sm">Delete Car</button>
+        <button
+        [disabled]="car.isSold"
+         type="button"
+         (click)="onBuy()"
+         class="btn btn-success btn-sm">Buy Car</button>
+      </div>
+    </div>
+
+  </a>
+
+
+

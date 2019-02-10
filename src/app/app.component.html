@@ -1,0 +1,16 @@
+<div class="container">
+  <app-cars-form
+  (addCar)="onAdd($event)"
+  ></app-cars-form>
+
+  <div class="list-group">
+    <app-car
+      (deleteCar)="onDelete($event)"
+      *ngFor = "let car of cars"
+      [car]="car"
+    ></app-car>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
